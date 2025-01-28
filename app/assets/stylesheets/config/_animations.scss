@@ -1,0 +1,31 @@
+@keyframes appear-then-fade {
+  0%, 100% {
+    opacity:0
+  }
+  5%, 60% {
+    opacity:1
+  }
+}
+
+@keyframes popup {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.02);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes popout {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}

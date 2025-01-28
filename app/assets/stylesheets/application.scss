@@ -1,0 +1,24 @@
+@import 'bootstrap/scss/bootstrap';
+@import 'bootstrap-icons/font/bootstrap-icons';
+
+// Mixins
+@import "mixins/media";
+
+// Configuration
+@import "config/variables";
+@import "config/reset";
+@import "config/animations";
+
+// Components
+@import "components/navbar";
+@import "components/session";
+@import "components/btn";
+@import "components/flash";
+@import "components/ai_chat";
+@import "components/empty_state";
+@import "components/form";
+@import "components/error_notification";
+@import "components/rouge";
+
+// Layouts
+@import "layouts/container";
