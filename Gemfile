@@ -46,10 +46,13 @@ group :development, :test do
 
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
   gem "brakeman", require: false
+  gem "factory_bot_rails", "~> 6.4"
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
   gem 'rspec-rails', '~> 7.0'
+
+  gem "shoulda-matchers", "~> 6.4"
 end
 
 group :development do
@@ -67,3 +70,6 @@ gem "bootstrap", "~> 5.3"
 gem "cssbundling-rails", "~> 1.4"
 
 gem "simple_form", "~> 5.3"
+
+gem "langchainrb", "~> 0.19.3"
+gem "faraday", "~> 2.12"
