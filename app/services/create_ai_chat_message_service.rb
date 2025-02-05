@@ -18,7 +18,7 @@
 class CreateAiChatMessageService
   prepend SimpleCommand
 
-  DEFAULT_MODEL_NAME = "llama3.2"
+  DEFAULT_MODEL_NAME = "mistral:latest"
 
   def initialize(prompt:, ai_chat_id: nil, user_id: nil)
     @ai_chat_id = ai_chat_id
@@ -65,7 +65,9 @@ class CreateAiChatMessageService
   # The LLM client.
   # @return [Langchain::LLM::Ollama] the LLM client
   def llm
-    @llm ||= Langchain::LLM::Ollama.new(url: "http://localhost:11434", default_options: { chat_model: DEFAULT_MODEL_NAME })
+    @llm ||= Langchain::LLM::Ollama.new(url: "http://localhost:11434",
+                                        default_options: { chat_model: DEFAULT_MODEL_NAME ,
+                                        connection_options: { timeout: 120, open_timeout: 60 }})
   end
 
   # Find or create the AiChat on which add the AiMessage.
